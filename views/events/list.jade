@@ -1,0 +1,53 @@
+extends ../layout
+
+block content
+    section.content-header
+        h1
+            | Listagem de Eventos
+            small Listagem de todos os eventos
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li.active Eventos
+
+
+    section.content
+        .row
+            .col-md-12
+                .box
+                    .box-header.with-border
+                        h3.box-title Eventos
+                    // /.box-header
+                    .box-body
+                        table.table.table-bordered
+                            tbody
+                                tr
+                                    th(style='width: 10px') #
+                                    th Evento
+                                    th Nome
+                                    th Realizado em
+                                    th Setor
+                                    th(style='width: 40px')
+                                each event in events
+                                    tr
+                                        td=event.id
+                                        td="Evento " + event.event_id
+                                        td=event.name
+                                        td=moment(event.created_at).format('DD/MM/YY H:m')
+                                        td Setor 01
+                                        td
+                                            a(href='/events/' + event.id).btn.btn-info Ver Participantes
+                    // /.box-body
+                    .box-footer.clearfix
+                        ul.pagination.pagination-sm.no-margin.pull-right
+                            li
+                                a(href='#') «
+                            li
+                                a(href='#') 1
+                            li
+                                a(href='#') »
+
+
+

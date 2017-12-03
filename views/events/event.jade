@@ -1,4 +1,4 @@
-extends layout
+extends ../layout
 
 block content
     section.content-header
@@ -25,19 +25,21 @@ block content
                             tbody
                                 tr
                                     th(style='width: 10px') #
-                                    th Evento
-                                    th Realizado em
-                                    th Setor
-                                    th(style='width: 40px')
-                                each event in events
+                                    th(style='width: 150px') Código Confirmação
+                                    th Código CN
+                                    th Nome
+                                    th Telefone
+                                    th Check In
+                                    th Check Out
+                                each participant in participants
                                     tr
-                                        td=event.id
-                                        td="Evento " + event.event_id
-                                        td=moment(event.created_at).format('DD/MM/YY')
-                                        td Setor 01
-                                        td
-                                            button.btn.btn-info Ver Participantes
-                                                span.badge.bg-white=event.participants.length
+                                        td=participant.id
+                                        td=participant.confirmation_code
+                                        td=participant.cn_code
+                                        td=participant.name
+                                        td=participant.phone_number
+                                        td=moment(participant.checkin).format('DD/MM/YY H:m')
+                                        td=moment(participant.checkout).format('DD/MM/YY H:m')
                     // /.box-body
                     .box-footer.clearfix
                         ul.pagination.pagination-sm.no-margin.pull-right
@@ -48,5 +50,5 @@ block content
                             li
                                 a(href='#') »
 
-
-
+block scripts
+    script(src='/js/pages/event.js')

@@ -15,7 +15,7 @@ optionAVG = {
         }
     },
     legend: {
-        data:['Ciclo 16', 'Clico 17']
+        data: ['Ciclo 16', 'Clico 17']
     },
     grid: {
         top: 70,
@@ -78,15 +78,15 @@ optionAVG = {
     ],
     series: [
         {
-            name:'Tempo Médio Setor 01',
-            type:'line',
+            name: 'Tempo Médio Setor 01',
+            type: 'line',
             xAxisIndex: 1,
             smooth: true,
             data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 75.6, 82.2, 48.7, 18.8, 6.0, 2.3]
         },
         {
-            name:'Tempo Médio Setor 02',
-            type:'line',
+            name: 'Tempo Médio Setor 02',
+            type: 'line',
             xAxisIndex: 1,
             smooth: true,
             data: [4.3, 2.8, 6.9, 31.8, 43.4, 57.33, 86.6, 58.0, 77.2, 28.8, 36.0, 42.3]
@@ -100,13 +100,13 @@ optionAVGFunnel = {
         formatter: "{a} <br/>{b} : {c}%"
     },
     legend: {
-        data: ['Semente','Bronze','Prata','Ouro','Diamante']
+        data: ['Semente', 'Bronze', 'Prata', 'Ouro', 'Diamante']
     },
     calculable: true,
     series: [
         {
-            name:'Nível',
-            type:'funnel',
+            name: 'Nível',
+            type: 'funnel',
             left: '10%',
             top: 60,
             //x2: 80,
@@ -162,47 +162,51 @@ optionAVGCycle = {
         data: ['Ciclo 1', 'Ciclo 2', 'Ciclo 3', 'Ciclo 4', 'Ciclo 5', 'Ciclo 6', 'Ciclo 7'],
         z: 10
     },
-    radiusAxis: {
-    },
-    polar: {
-    },
-    series: [{
-        type: 'bar',
-        data: [12.5, 15.3, 20.2, 31.5, 28.9, 36.4, 1],
-        coordinateSystem: 'polar',
-        name: 'Semente',
-        stack: 'semente'
-    }, {
-        type: 'bar',
-        data: [2, 4, 6, 1, 3, 2, 1],
-        coordinateSystem: 'polar',
-        name: 'Bronze',
-        stack: 'bronze'
-    }, {
-        type: 'bar',
-        data: [1, 2, 3, 4, 1, 2, 5],
-        coordinateSystem: 'polar',
-        name: 'Prata',
-        stack: 'prata'
-    }, {
-        type: 'bar',
-        data: [1, 2, 3, 4, 1, 2, 5],
-        coordinateSystem: 'polar',
-        name: 'Ouro',
-        stack: 'ouro'
-    }, {
-        type: 'Diamante',
-        data: [1, 2, 3, 4, 1, 2, 5],
-        coordinateSystem: 'polar',
-        name: 'Diamante',
-        stack: 'diamante'
-    }],
+    radiusAxis: {},
+    polar: {},
+    series: [
+        {
+            type: 'bar',
+            data: [12.5, 15.3, 20.2, 37.0, 23.1, 36.4, 23.2],
+            coordinateSystem: 'polar',
+            name: 'Semente',
+            stack: 'semente'
+        },
+        {
+            type: 'bar',
+            data: [23.5, 45.3, 17.2, 11.5, 29.9, 43.4, 19.2],
+            coordinateSystem: 'polar',
+            name: 'Bronze',
+            stack: 'bronze'
+        },
+        {
+            type: 'bar',
+            data: [32.5, 25.3, 22.2, 43.5, 43.9, 28.4, 29.2],
+            coordinateSystem: 'polar',
+            name: 'Prata',
+            stack: 'prata'
+        },
+        {
+            type: 'bar',
+            data: [25.5, 17.3, 42.2, 32.5, 31.9, 21.4, 32.2],
+            coordinateSystem: 'polar',
+            name: 'Ouro',
+            stack: 'ouro'
+        },
+        {
+            type: 'bar',
+            data: [40.5, 21.3, 15.2, 14.5, 19.9, 40.4, 32.2],
+            coordinateSystem: 'polar',
+            name: 'Diamante',
+            stack: 'diamante'
+        }
+    ],
     legend: {
         show: true,
-        data: ['A', 'B', 'C']
+        data: ['Semente', 'Bronze', 'Prata', 'Ouro', 'Diamante']
     }
 };
 
-
 averageTimeChart.setOption(optionAVG);
 averageTimeChartFunnel.setOption(optionAVGFunnel);
+averageTimeChartCycle.setOption(optionAVGCycle);
