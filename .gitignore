@@ -64,6 +64,7 @@ typings/
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff:
+.idea
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/dictionaries
@@ -110,3 +111,10 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+.idea/hackthon-natura.iml
+.idea/inspectionProfiles/
+.idea/jsLibraryMappings.xml
+.idea/modules.xml
+.idea/runConfigurations/
+.idea/vcs.xml
+.idea/watcherTasks.xml
