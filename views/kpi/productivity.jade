@@ -1,0 +1,35 @@
+extends ../layout
+
+block content
+    section.content-header
+        h1
+            | KPI
+            small Produtividade
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#')
+                    i.fa.fa-pie-chart
+                    | KPI's
+            li.active
+                i.fa.fa-clock-o
+                |  Produtividade
+
+
+    section.content
+        .row
+            .col-md-12
+                .box
+                    .box-header.with-border
+                        h3.box-title
+                    .box-body
+                        div(style='width: 100%; height: 500px').productivity
+
+
+
+block scripts
+    script(src='/bower_components/echarts/echarts.min.js')
+    script(src='/js/pages/productivity.js')
